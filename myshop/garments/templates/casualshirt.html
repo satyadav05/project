@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container"><br>
+<h3 align='center'> All Casual Shirts</h3>
+<hr>
+
+<table width=100% border=1 cellspacing="0" cellpadding="10">
+{% for i in lst1 %}
+
+<tr align='center'>
+<td width=40% > <h4> {{i.name}}</h4>
+<img src="{{i.photo.url}}" width=200 height=200 alt="Casual Shirts From My garment shop"/>
+</td>
+
+<td width=60% align='center'>
+<h4> Product Details: </h4>
+Name:{{i.name}} <br>
+Price:{{i.price}} <br>
+Quality:{{i.stock}} <br>
+Description:{{i.desc}} <br><br>
+<button type="button" class="btn btn-outline-danger">BUY</button>
+<a href="#" class="btn btn-info ">
+<span class="glyphicon glyphicon-shopping-cart"> </span> Add To Cart
+</a>
+</td>
+</tr>
+
+
+
+{% endfor %}
+</table>
+</div>
+
+
+{% endblock %}

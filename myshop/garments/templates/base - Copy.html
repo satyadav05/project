@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Garment shop {% block title %}This is commercial webpage. {% endblock %}</title>
+  
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <!-- Brand -->
+<table>
+ <th>
+  <a class="navbar-brand" href="#">My Garment shop</a> 
+</th>
+  <!-- Links -->
+ <th>
+      
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        MAN
+      </a>
+      
+      <div class="dropdown-menu"><td>
+        <a class="dropdown-item" href="/formalshirt">Formal Shirts</a>
+        <a class="dropdown-item" href="/casualshirt">Casual Shirt</a>
+        <a class="dropdown-item" href="/tshirt">T-Shirt</a></td>
+      </div>
+      
+ </th>
+ <th>
+    
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        WOMEN
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/indianwear">Indian Wear</a>
+        <a class="dropdown-item" href="/westernwear">Western Wear</a>
+        <a class="dropdown-item" href="/footwear">Footwear</a>
+      </div>
+   
+ </th>
+    <!-- Dropdown -->
+ <th>
+    
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        KIDS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="boysclothing">Boys Clothing</a>
+        <a class="dropdown-item" href="girlsclothing">Girls Clothing</a>
+        <a class="dropdown-item" href="brand">Brands</a>
+      </div>
+    
+ </th>
+
+ <th class="nav-item"> 
+    
+      <a class="mx-auto nav-link"  href="/contactus">CONTACT US</a>
+    
+ </th>
+ <th class="nav-item">
+    
+      <a class="nav-link" style="width:300px" href="#">ABOUT US</a>
+    
+ </th>
+
+ <th>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+  <form class="form-inline" action="/search_list">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search for Products,Brand and..." name='query' value='{{query.GET.get}}'>
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</nav>
+ </th>
+
+ </table>
+ </nav>
+ 
+
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

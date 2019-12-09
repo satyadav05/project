@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+ <h3 align="center"> Your Shopping cart form mygarments shop </h3>
+ <h3> There are {{no_item}} items in your cart </h3>
+ <h3> Total price of the item is Rs.{{tot_price}} </h3>
+
+ <hr>
+ <table width=100% border=0>
+ {% for i in lst %}
+ <tr>
+ <td width=50%> 
+ Selected item={{i.name}}<br>
+ It's description={{i.desc}} <br>
+ It's Price={{i.price}} <br>
+ </td>
+ 
+ <td>
+ <img src="{{i.photo.url}}" width=100 height=130 />
+ </td>
+
+ </tr>
+ {% endfor %}
+ 
+ </div>
+
+
+{% endblock %}
